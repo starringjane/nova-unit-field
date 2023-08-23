@@ -7,7 +7,7 @@
     >
         <template #field>
             <div class="flex flex-wrap items-stretch w-full relative">
-                <div class="flex -mr-px">
+              <div class="flex -mr-px" v-if="currentField.prefix">
                     <span class="flex items-center leading-normal rounded rounded-r-none border border-r-0 border-gray-300 dark:border-gray-700 px-3 whitespace-nowrap bg-gray-100 dark:bg-gray-800 text-gray-500 text-sm font-bold">
                         {{ currentField.prefix }}
                     </span>
@@ -27,7 +27,7 @@
                     :value="value"
                 />
 
-                <div class="flex -ml-px">
+              <div class="flex -ml-px" v-if="currentField.suffix">
                     <span class="flex items-center leading-normal rounded rounded-l-none border border-l-0 border-gray-300 dark:border-gray-700 px-3 whitespace-nowrap bg-gray-100 dark:bg-gray-800 text-gray-500 text-sm font-bold">
                         {{ currentField.suffix }}
                     </span>
