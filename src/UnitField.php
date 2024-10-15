@@ -48,6 +48,10 @@ class UnitField extends Number
 
     public function formatUnit($value, $unit = null)
     {
+        if(empty($value)) {
+            return null;
+        }
+
         $string = '';
 
         if ($this->prefix) {
